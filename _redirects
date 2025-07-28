@@ -1,0 +1,2 @@
+/* _redirects file for Netlify to handle CMS routing */
+/admin/*  /admin/index.html  200
