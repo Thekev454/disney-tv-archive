@@ -215,3 +215,91 @@ footer {
   background: #111;
   border-top: 1px solid #333;
 }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: radial-gradient(circle at 20% 30%, #1e1e2f, #0f0f1c);
+  color: white;
+  margin: 0;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+.site-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  z-index: 1;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+}
+nav {
+  display: flex;
+  gap: 32px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content,
+.submenu-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 12px;
+  z-index: 1000;
+}
+.dropdown:hover .dropdown-content,
+.submenu:hover .submenu-content {
+  display: block;
+}
+.dropdown button,
+.nav-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.nav-button:hover,
+.dropdown button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+.content {
+  padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.85rem;
+  background: #111;
+}
