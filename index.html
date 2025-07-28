@@ -2,76 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Disney TV Archive</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <img src="https://yt3.googleusercontent.com/NdCgwKNoifHG3btSv5DBc1_ewvYzJ8KBn3Ta8u8k0NaLvyjFazKbmhJxt5Yd1gR2XRvGOVIJpBo=w2560-h1440" alt="Disney Banner" class="hero">
-    <div class="site-title glass less-blur" id="title">Welcome to the Disney TV Archive</div>
+    <div class="site-title less-blur">Welcome to the Disney TV Archive</div>
   </header>
-
   <div class="nav-wrapper glass">
     <nav>
-      <div class="dropdown"><a href="index.html" class="nav-link">🏠 Home</a></div>
-      <div class="dropdown glass">
+      <div class="dropdown">
+        <a href="index.html" class="nav-button">🏠 Home</a>
+      </div>
+      <div class="dropdown">
         <button>Disney Channel</button>
         <div class="dropdown-content">
           <div class="submenu">
             <a href="#">USA</a>
-            <div class="submenu-content glass">
+            <div class="submenu-content">
               <a href="#">2020</a><a href="#">2021</a><a href="#">2022</a>
             </div>
           </div>
           <div class="submenu">
             <a href="#">Germany</a>
-            <div class="submenu-content glass">
+            <div class="submenu-content">
               <a href="#">2018</a><a href="#">2019</a><a href="#">2020</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="dropdown glass">
+      <div class="dropdown">
         <button>Disney XD</button>
         <div class="dropdown-content">
-          <div class="submenu">
-            <a href="#">USA</a>
-            <div class="submenu-content glass">
-              <a href="#">2015</a><a href="#">2016</a>
-            </div>
+          <div class="submenu"><a href="#">USA</a>
+            <div class="submenu-content"><a href="#">2015</a><a href="#">2016</a></div>
           </div>
-          <div class="submenu">
-            <a href="#">Germany</a>
-            <div class="submenu-content glass">
-              <a href="#">2017</a><a href="#">2018</a>
-            </div>
+          <div class="submenu"><a href="#">Germany</a>
+            <div class="submenu-content"><a href="#">2017</a><a href="#">2018</a></div>
           </div>
         </div>
       </div>
-      <div class="dropdown glass">
+      <div class="dropdown">
         <button>Disney Junior</button>
         <div class="dropdown-content">
-          <div class="submenu">
-            <a href="#">USA</a>
-            <div class="submenu-content glass">
-              <a href="#">2013</a><a href="#">2014</a>
-            </div>
+          <div class="submenu"><a href="#">USA</a>
+            <div class="submenu-content"><a href="#">2013</a><a href="#">2014</a></div>
           </div>
-          <div class="submenu">
-            <a href="#">Germany</a>
-            <div class="submenu-content glass">
-              <a href="#">2015</a><a href="#">2016</a>
-            </div>
+          <div class="submenu"><a href="#">Germany</a>
+            <div class="submenu-content"><a href="#">2015</a><a href="#">2016</a></div>
           </div>
         </div>
       </div>
-      <div class="dropdown glass">
-        <button>News</button>
-        <div class="dropdown-content">
-          <a href="news.html">View All News</a>
-        </div>
+      <div class="dropdown">
+        <a href="news.html" class="nav-button">📰 News</a>
       </div>
     </nav>
     <div class="language-toggle">
@@ -79,7 +65,6 @@
       <button onclick="setLanguage('de')">🇩🇪 DE</button>
     </div>
   </div>
-
   <div class="content">
     <div class="news-section">
       <h2 id="latest-news">Latest News</h2>
@@ -92,31 +77,23 @@
       </div>
     </div>
   </div>
-
   <footer>
     © 2025 Disney TV Archive | Fan project – not affiliated with Disney.
-    <p style="margin-top: 10px; font-size: 0.75rem; color: #999;">
-      This is a fan-made website and not affiliated with The Walt Disney Company. All trademarks and copyrights belong to their respective owners.
-    </p>
   </footer>
-
   <script>
     const translations = {
       en: {
-        title: "Welcome to the Disney TV Archive",
         latestNews: "Latest News",
         newsTitle: "New Classic Episodes Uploaded",
         newsDesc: "We've added a batch of 2012 Disney Channel episodes from Germany. Enjoy the nostalgia!"
       },
       de: {
-        title: "Willkommen im Disney TV Archiv",
         latestNews: "Neuigkeiten",
         newsTitle: "Neue Klassiker hochgeladen",
         newsDesc: "Wir haben eine Reihe von Disney Channel Folgen aus dem Jahr 2012 aus Deutschland hinzugefügt. Viel Spaß beim Zurücklehnen!"
       }
     };
     function setLanguage(lang) {
-      document.getElementById("title").textContent = translations[lang].title;
       document.getElementById("latest-news").textContent = translations[lang].latestNews;
       document.getElementById("news-title").textContent = translations[lang].newsTitle;
       document.getElementById("news-desc").textContent = translations[lang].newsDesc;
@@ -124,3 +101,4 @@
   </script>
 </body>
 </html>
+
